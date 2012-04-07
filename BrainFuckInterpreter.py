@@ -24,13 +24,13 @@ class BrainfuckInterpreter( object ):
 			self.iPointer +=1
 			self.output += data
 		elif program == ".":
-			self.output += "\0"
+			self.output += data
 		elif program == "":
 			self.output += ""
 		elif len(program) == 1 and program != ".":
 			pass
 		else:
-			self.output += "\0\0"
+			self.output += data + data
 		return self.output
 
 class BrainfuckInterpreterTest(unittest.TestCase):
