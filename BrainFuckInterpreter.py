@@ -39,7 +39,7 @@ class BrainfuckInterpreterTest(unittest.TestCase):
 	def testInputandOutput(self):
 		interpreter = BrainfuckInterpreter()
 		result = interpreter.run( ",.", "a" )
-		self.assertEquals( "\0\0", result )
+		self.assertEquals( "a", result )
 
 
 if __name__ == "__main__":
