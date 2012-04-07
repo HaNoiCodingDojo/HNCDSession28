@@ -7,7 +7,10 @@ class BrainfuckInterpreter( object ):
 		pass
 
 	def run( self, program ):
-		return ""
+		if len(program) == 0:
+			return ""
+		else:
+			return "\0"
 
 class BrainfuckInterpreterTest(unittest.TestCase):
 
