@@ -10,6 +10,10 @@ class BrainfuckInterpreter( object ):
 
 	def run( self, program, input = "" ):
 		data = "\0"
+
+		for self.instructionPointer in range(len(program)):
+			pass
+			
 		if program == ".":
 			self.output += data
 		if program == "..":
