@@ -7,11 +7,10 @@ class BrainfuckInterpreter( object ):
 		self.data = ""
 
 	def run( self, program, input = "" ):
-
 		if program == ",..,..":
 			self.data = str(input[0])*2+str(input[1])*2
 		elif program == ",.":
-			self.data = input
+			self.data = str(input[0])
 		elif len(program) == 0:
 			self.data = ""
 		elif len(program) == 1:
