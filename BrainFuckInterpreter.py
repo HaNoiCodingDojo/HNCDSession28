@@ -9,7 +9,7 @@ class BrainfuckInterpreter( object ):
 
 	def run( self, program, input = "" ):
 		if program == ",..,..":
-			self.data = str(input[self.iPointer])*2
+			self.data += str(input[self.iPointer])*2
 			self.iPointer +=1
 			self.data += str(input[self.iPointer])*2
 		elif program == ",.":
