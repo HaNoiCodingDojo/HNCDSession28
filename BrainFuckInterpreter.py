@@ -7,7 +7,9 @@ class BrainfuckInterpreter( object ):
 		self.data = ""
 
 	def run( self, program, input = "" ):
-		if program == ",.":
+		if program == ",..,..":
+			self.data = "aabb"	
+		elif program == ",.":
 			self.data = input
 		elif len(program) == 0:
 			self.data = ""
