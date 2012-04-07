@@ -19,5 +19,10 @@ class BrainfuckInterpreterTest(unittest.TestCase):
 		result = interpreter.run( "" )
 		self.assertEquals( "", result )
 
+	def testLittleOutputProgram(self):
+		interpreter = BrainfuckInterpreter()
+		result = interpreter.run( "." )
+		self.assertEquals( "\0", result )
+
 if __name__ == "__main__":
 	unittest.main()
