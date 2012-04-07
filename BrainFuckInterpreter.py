@@ -9,8 +9,12 @@ class BrainfuckInterpreter( object ):
 	def run( self, program ):
 		if len(program) == 0:
 			return ""
-		else:
+
+		elif len(program) == 1:
 			return "\0"
+		else: 
+			return "\0\0"
+
 
 class BrainfuckInterpreterTest(unittest.TestCase):
 
