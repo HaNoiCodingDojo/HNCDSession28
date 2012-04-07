@@ -13,13 +13,13 @@ class BrainfuckInterpreter( object ):
 			self.iPointer +=1
 			self.data += str(input[self.iPointer])*2
 		elif program == ",.":
-			self.data = str(input[self.iPointer])
+			self.data += str(input[self.iPointer])
 		elif len(program) == 0:
-			self.data = ""
+			self.data += ""
 		elif len(program) == 1:
-			self.data = "\0"
+			self.data += "\0"
 		else: 
-			self.data = "\0\0"
+			self.data += "\0\0"
 		return self.data
 
 class BrainfuckInterpreterTest(unittest.TestCase):
