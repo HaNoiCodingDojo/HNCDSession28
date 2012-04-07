@@ -13,8 +13,7 @@ class BrainfuckInterpreter( object ):
 			self.iPointer +=1
 			self.data = self.data+str(input[self.iPointer])*2
 		elif program == ",.":
-			self.data = str(input[0])
-
+			self.data = str(input[self.iPointer])
 		elif len(program) == 0:
 			self.data = ""
 		elif len(program) == 1:
