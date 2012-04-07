@@ -26,7 +26,7 @@ class BrainfuckInterpreter( object ):
 			self.inputPointer +=1
 
 			self.output += data
-		elif program == "." and program[self.instructionPointer] == '.':
+		elif program == ".":
 			self.output += data
 		elif program == "..":
 			self.output += data
