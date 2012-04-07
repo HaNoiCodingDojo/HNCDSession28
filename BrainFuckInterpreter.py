@@ -75,5 +75,11 @@ class BrainfuckInterpreterTest(unittest.TestCase):
 		result = interpreter.run( ",", "a" )
 		self.assertEquals( "", result )
 
+	def testInputAndInputWithoutOutput(self):
+		interpreter = BrainfuckInterpreter()
+		result = interpreter.run( ",,", "ab" )
+		self.assertEquals( "", result )
+
+
 if __name__ == "__main__":
 	unittest.main()
