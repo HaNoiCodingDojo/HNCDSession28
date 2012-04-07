@@ -5,27 +5,27 @@ import unittest
 class BrainfuckInterpreter( object ):
 	def __init__( self ):
 		self.output = ""
-		self.iPointer = 0
-		self.currentIntruction = 0	
+		self.inputPointer = 0
+		self.instructionPointer = 0	
 
 	def run( self, program, input = "" ):
 		data = "\0"
 		if program == ",..,..":
-			data = str(input[self.iPointer])
-			self.iPointer +=1
+			data = str(input[self.inputPointer])
+			self.inputPointer +=1
 			self.output += data
 			self.output += data
 
-			data = str(input[self.iPointer])
-			self.iPointer +=1
+			data = str(input[self.inputPointer])
+			self.inputPointer +=1
 			self.output += data
 			self.output += data
 		elif program == ",.":
-			data = str(input[self.iPointer])
-			self.iPointer +=1
+			data = str(input[self.inputPointer])
+			self.inputPointer +=1
 
 			self.output += data
-		elif program == "." and program[self.currentIntruction] == '.':
+		elif program == "." and program[self.instructionPointer] == '.':
 			self.output += data
 		elif program == "..":
 			self.output += data
