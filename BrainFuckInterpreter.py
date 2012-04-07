@@ -22,10 +22,10 @@ class BrainfuckInterpreter( object ):
 			data = str(input[self.iPointer])
 			self.iPointer +=1
 			self.output += data
+		elif program == ".":
+			self.output += "\0"
 		elif program == "":
 			self.output += ""
-		elif program == ".":
-			self.output += "\0"	
 		elif len(program) == 1 and program != ".":
 			pass
 		else:
