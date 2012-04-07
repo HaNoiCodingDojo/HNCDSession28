@@ -19,28 +19,6 @@ class BrainfuckInterpreter( object ):
 				data = str(input[self.inputPointer])
 				self.inputPointer +=1
 				
-		# if program == ".":
-		# 	self.output += data
-
-		# if program == "..":
-		# 	self.output += data
-		# 	self.output += data
-
-		# if program == ",.":
-		# 	data = str(input[self.inputPointer])
-		# 	self.inputPointer +=1
-		# 	self.output += data
-
-		# if program == ",..,..":
-		# 	data = str(input[self.inputPointer])
-		# 	self.inputPointer +=1
-		# 	self.output += data
-		# 	self.output += data
-
-		# 	data = str(input[self.inputPointer])
-		# 	self.inputPointer +=1
-		# 	self.output += data
-		# 	self.output += data
 		return self.output
 
 class BrainfuckInterpreterTest(unittest.TestCase):
