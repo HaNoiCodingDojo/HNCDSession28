@@ -30,7 +30,8 @@ class BrainfuckInterpreter( object ):
 		elif len(program) == 1 and program != ".":
 			pass
 		else:
-			self.output += data + data
+			self.output += data
+			self.output += data
 		return self.output
 
 class BrainfuckInterpreterTest(unittest.TestCase):
