@@ -6,6 +6,7 @@ class BrainfuckInterpreter( object ):
 	def __init__( self ):
 		self.output = ""
 		self.iPointer = 0
+		self.currentIntruction = 0	
 
 	def run( self, program, input = "" ):
 		data = "\0"
@@ -24,15 +25,15 @@ class BrainfuckInterpreter( object ):
 			self.iPointer +=1
 
 			self.output += data
-		elif program == ".":
+		elif program == "." and program[self.currentIntruction] == '.':
+			self.output += data
+		elif program == "..":
+			self.output += data
 			self.output += data
 		elif program == "":
 			pass
 		elif len(program) == 1 and program != ".":
 			pass
-		elif program == "..":
-			self.output += data
-			self.output += data
 		return self.output
 
 class BrainfuckInterpreterTest(unittest.TestCase):
