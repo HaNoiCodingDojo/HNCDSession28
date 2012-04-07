@@ -4,23 +4,23 @@ import unittest
 
 class BrainfuckInterpreter( object ):
 	def __init__( self ):
-		self.data = ""
+		self.output = ""
 		self.iPointer = 0
 
 	def run( self, program, input = "" ):
 		if program == ",..,..":
-			self.data += str(input[self.iPointer])*2
+			self.output += str(input[self.iPointer])*2
 			self.iPointer +=1
-			self.data += str(input[self.iPointer])*2
+			self.output += str(input[self.iPointer])*2
 		elif program == ",.":
-			self.data += str(input[self.iPointer])
+			self.output += str(input[self.iPointer])
 		elif len(program) == 0:
-			self.data += ""
+			self.output += ""
 		elif len(program) == 1:
-			self.data += "\0"
+			self.output += "\0"
 		else: 
-			self.data += "\0\0"
-		return self.data
+			self.output += "\0\0"
+		return self.output
 
 class BrainfuckInterpreterTest(unittest.TestCase):
 
