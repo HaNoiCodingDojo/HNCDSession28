@@ -8,6 +8,7 @@ class BrainfuckInterpreter( object ):
 		self.iPointer = 0
 
 	def run( self, program, input = "" ):
+		data = "\0"
 		if program == ",..,..":
 			data = str(input[self.iPointer])
 			self.iPointer +=1
