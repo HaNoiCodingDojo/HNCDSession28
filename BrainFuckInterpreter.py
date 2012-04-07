@@ -5,12 +5,16 @@ import unittest
 class BrainfuckInterpreter( object ):
 	def __init__( self ):
 		self.data = ""
+		self.iPointer = 0
 
 	def run( self, program, input = "" ):
 		if program == ",..,..":
-			self.data = str(input[0])*2+str(input[1])*2
+			self.data = str(input[self.iPointer])*2
+			self.iPointer +=1
+			self.data = self.data+str(input[self.iPointer])*2
 		elif program == ",.":
 			self.data = str(input[0])
+
 		elif len(program) == 0:
 			self.data = ""
 		elif len(program) == 1:
