@@ -2,6 +2,13 @@
 
 import unittest
 
+class BrainfuckInterpreter( object ):
+	def __init__( self ):
+		pass
+
+	def run( self, program ):
+		return ""
+
 class BrainfuckInterpreterTest(unittest.TestCase):
 
 	def testTruth(self):
