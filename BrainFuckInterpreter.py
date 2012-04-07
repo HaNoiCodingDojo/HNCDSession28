@@ -25,7 +25,8 @@ class BrainfuckInterpreter( object ):
 		elif program == "":
 			self.output += ""
 		elif len(program) == 1:
-			self.output += "\0"
+			if program == ".":
+				self.output += "\0"
 		else: 
 			self.output += "\0\0"
 		return self.output
