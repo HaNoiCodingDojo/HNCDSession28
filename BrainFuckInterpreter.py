@@ -21,14 +21,14 @@ class BrainfuckInterpreter( object ):
 			self.inputPointer +=1
 			self.output += data
 			self.output += data
-		elif program == ",.":
+		if program == ",.":
 			data = str(input[self.inputPointer])
 			self.inputPointer +=1
 
 			self.output += data
-		elif program == ".":
+		if program == ".":
 			self.output += data
-		elif program == "..":
+		if program == "..":
 			self.output += data
 			self.output += data
 		return self.output
