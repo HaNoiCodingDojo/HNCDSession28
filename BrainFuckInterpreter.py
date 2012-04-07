@@ -22,7 +22,7 @@ class BrainfuckInterpreter( object ):
 			data = str(input[self.iPointer])
 			self.iPointer +=1
 			self.output += data
-		elif len(program) == 0:
+		elif program == "":
 			self.output += ""
 		elif len(program) == 1:
 			self.output += "\0"
