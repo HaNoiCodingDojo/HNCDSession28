@@ -6,10 +6,11 @@ class BrainfuckInterpreter( object ):
 	def __init__( self ):
 		pass
 
-	def run( self, program ):
+	def run( self, program, input = "" ):
+		if program == ",.":
+			return input
 		if len(program) == 0:
 			return ""
-
 		elif len(program) == 1:
 			return "\0"
 		else: 
