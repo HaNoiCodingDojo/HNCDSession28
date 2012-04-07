@@ -4,18 +4,18 @@ import unittest
 
 class BrainfuckInterpreter( object ):
 	def __init__( self ):
-		pass
+		self.data = ""
 
 	def run( self, program, input = "" ):
 		if program == ",.":
-			return input
-		if len(program) == 0:
-			return ""
+			self.data = input
+		elif len(program) == 0:
+			self.data = ""
 		elif len(program) == 1:
-			return "\0"
+			self.data = "\0"
 		else: 
-			return "\0\0"
-
+			self.data = "\0\0"
+		return self.data
 
 class BrainfuckInterpreterTest(unittest.TestCase):
 
